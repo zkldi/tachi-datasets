@@ -2,7 +2,7 @@
 
 # Tachi Datasets
 
-[Tachi](https://github.com/zkrising/Tachi) is a rhythm game website that tracks your scores on all your favourite games, and provides *awesome* features like quests, sessions, rivals, and more!
+[Tachi](https://github.com/zkldi/Tachi) is a rhythm game website that tracks your scores on all your favourite games, and provides _awesome_ features like quests, sessions, rivals, and more!
 
 We think it'd be in people's interest to have open, easy-to-use access to the millions of scores and sessions we have on Tachi.
 
@@ -28,23 +28,16 @@ Download the dump you want from the CDN.
 
 ## Kamaitachi
 
-- https://cdn-kamai.tachi.ac/datasets/2024-05.dump
+- https://cdn.tachi.ac/datasets/tachi-kamai-2026-06.sql.gz
 
 ## Bokutachi
 
-- https://cdn-boku.tachi.ac/datasets/2024-05.dump
+- https://cdn.tachi.ac/datasets/tachi-boku-2026-06.sql.gz
 
-Install [MongoDB and its CLI Tools](https://www.mongodb.com/try/download/database-tools).
-
-Run `mongorestore --gzip --archive=FILE_NAME_HERE` to restore the database.
-
-You now have a full tachi dataset under `anon-kamai` or `anon-boku` and you can run [MongoDB](https://www.mongodb.com) queries on it.
-
-I highly recommend using [MongoDB Compass](https://www.mongodb.com/products/tools/compass) to play around with your data.
+Run `gunzip -c "$filename" | psql -d "$db_url"` to restore the database. If you don't understand what this means, go to the [Tachi Repo](https://github.com/zkldi/Tachi), get set up, and run `just db-load-dataset`.
 
 ## Anonymisation
 
 This dataset has been anonymised to the best of our ability; no usernames or about me's or anything like that is present.
 
 **All passwords are set to `password`.**
-

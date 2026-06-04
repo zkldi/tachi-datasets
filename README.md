@@ -29,10 +29,12 @@ Download the dump you want from the CDN.
 ## Kamaitachi
 
 - https://cdn.tachi.ac/datasets/tachi-kamai-2026-06.sql.gz
+`9f90487e57b1a33de75c1ad6fc8f43bf9d7df52fab76fc5048aa1a5c481433a1`
 
 ## Bokutachi
 
 - https://cdn.tachi.ac/datasets/tachi-boku-2026-06.sql.gz
+`a1f71ccefbd03f07ee1ba4bcb19f4a04058a5af3f471a709050be47b4cc6e0bd`
 
 Run `gunzip -c "$filename" | psql -d "$db_url"` to restore the database. If you don't understand what this means, go to the [Tachi Repo](https://github.com/zkldi/Tachi), get set up, and run `just db-load-dataset`.
 
